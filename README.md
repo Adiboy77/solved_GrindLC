@@ -1,2 +1,2 @@
 # Solved_GrindLC
-Solutions of the coveted Grind75 list
+Solving the coveted Grind75 list of leetcode: https://www.techinterviewhandbook.org/grind75?difficulty=Medium&difficulty=Hard&difficulty=Easy&weeks=7&hours=22
