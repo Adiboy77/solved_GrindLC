@@ -1,2 +1,2 @@
-# solved_GrindLC
+# Solved_GrindLC
 Solutions of the coveted Grind75 list
