@@ -26,6 +26,7 @@ class Solution {
         return true;
     }
 */
+//Own solution:
 class Solution {
 public:
     bool backspaceCompare(string s, string t) {
