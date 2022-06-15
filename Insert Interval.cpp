@@ -96,7 +96,7 @@ public:
         vector<vector<int>> res;
         size_t i = 0;
         
-        // Left part (no intersection with newInterval)
+        // Left part (no intersection with newInterval)//newInterval is at right, intervals at left
         while (i < intervals.size() && intervals[i][1] < newInterval[0]) {
             res.push_back(intervals[i]);
             ++i;
