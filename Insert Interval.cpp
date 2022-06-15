@@ -59,27 +59,18 @@ own code:
             for(int i=1;i<n;i++)
             {
                 if(grid[i][0] > grid[i-1][1])
-                {
-                    if(out.size()==0 || out.back()!=grid[i-1])
                     out.push_back(grid[i-1]);
-                    if(out.size()==0 || out.back()!=grid[i])
-                    out.push_back(grid[i]);
-                }
                   else
                   {
-                      int hj = out.size();
-                      if(hj>0)
-                      {
-                             out[hj-1][0] = min(grid[i-1][0],grid[i][0]);
-                      out[hj-1][1] = max(grid[i-1][1],grid[i][1]);
-                      }
-                     
                       grid[i][0] = min(grid[i-1][0],grid[i][0]);
-                      grid[i][1] = max(grid[i-1][1],grid[i][1]);
-                      if(hj==0 || out.back()!=grid[i])
-                      out.push_back(grid[i]);
-                      
+                      grid[i][1] = max(grid[i-1][1],grid[i][1]);  
                   }
+            }
+            int ns = out.size();
+            if(ns==0 || grid[n-1][0] > out[ns-1][1])
+            {
+                out.push_back(grid[n-1]);
+                return out;
             }
         }
         else
