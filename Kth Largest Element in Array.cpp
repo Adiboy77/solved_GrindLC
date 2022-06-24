@@ -1,5 +1,32 @@
 /*
 For brute solutions look:https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/893847/C%2B%2B-Ten-Solutions
+Brute Solutions:
+1.)STL nth_element
+int findKthLargest(vector<int>& nums, int k) {
+	nth_element(nums.begin(),nums.begin()+nums.size()-k,nums.end());
+	return nums[nums.size()-k];
+}
+int findKthLargest(vector<int>& nums, int k) {
+	nth_element(nums.begin(),nums.begin()+k-1,nums.end(),greater<int>());
+	return nums[k-1];
+}
+
+2.)MaxHeap using priority_queue
+int findKthLargest(vector<int>& nums, int k) {
+	priority_queue<int> pq(nums.begin(),nums.end());
+	for(int i=1;i<k;++i) pq.pop();
+	return pq.top();
+}
+
+3.)MinHeap using priority_queue
+int findKthLargest(vector<int>& nums, int k) {
+	priority_queue<int,vector<int>,greater<int>> pq;
+	for(int i=0;i<nums.size();++i){
+		pq.push(nums[i]);
+		if(pq.size()>k) pq.pop();
+	}
+	return pq.top();            
+}
 */
 //Learn more about quick select algorithm
 /*
