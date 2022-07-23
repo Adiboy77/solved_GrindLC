@@ -3,7 +3,7 @@ public:
     string longestCommonPrefix(vector<string>& strs) {
         string ans = "";
         int n = strs.size();
-        int minL = 201;
+        int minL = 201;//because of the constraints.
         for(int i = 0;i<n;i++)
         {
             int temp = strs[i].length();
