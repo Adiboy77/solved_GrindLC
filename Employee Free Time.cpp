@@ -1,3 +1,4 @@
+//Done on own:
 /**
  * Definition of Interval:
  * class Interval {
